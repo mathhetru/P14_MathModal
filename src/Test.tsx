@@ -8,16 +8,14 @@ function Test() {
     setIsModalOpen(!isModalOpen);
   };
 
+  const handleClose = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div>
-      <button onClick={HandleClick}></button>
-      <Modal
-        isOpen={isModalOpen}
-        header={true}
-        footer={true}
-        headerTitle={"C'est un header"}
-        buttonFooter={"close the door"}
-      />
+      <button onClick={HandleClick}>BOUTOOOON</button>
+      <Modal isOpen={isModalOpen} onClose={handleClose} hasHeader={false} hasFooter={true}/>
     </div>
   );
 }
